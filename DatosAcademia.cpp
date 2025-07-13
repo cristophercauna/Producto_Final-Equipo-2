@@ -10,13 +10,14 @@ struct Postulante {
 };
 
 struct Simulacro {
-    int DNI;     
+    int DNI;      
     string fecha;
 };
 
 void agregarPostulante(Postulante[], int&, Postulante);
 void mostrarPostulante(Postulante[], int);
 void agregarSimulacro(Simulacro[], int&, Simulacro);
+void mostrarSimulacros(Simulacro[], int);
 
 int main() {
     Postulante postulantes[100];
@@ -32,6 +33,7 @@ int main() {
         cout << "1. Postulante Nuevo\n";
         cout << "2. Mostrar Postulantes\n";
         cout << "3. Registrar Simulacro\n";
+        cout << "4. Mostrar Simulacros\n";
         cout << "0. Salir\n";
         cout << "Ingrese el operador: ";
         cin >> op;
@@ -71,6 +73,12 @@ int main() {
                 cout << "Ingrese la fecha del simulacro (dd/mm/aaaa): ";
                 getline(cin, nuevoSim.fecha);
                 agregarSimulacro(simulacros, numSimulacros, nuevoSim);
+                system("pause");
+                break;
+            }
+            case 4: {
+                system("cls");
+                mostrarSimulacros(simulacros, numSimulacros);
                 system("pause");
                 break;
             }
@@ -134,5 +142,18 @@ void agregarSimulacro(Simulacro lista[], int& cantidad, Simulacro nuevo) {
         cout << "Simulacro agregado correctamente!" << endl;
     } else {
         cout << "Ya no se pueden agregar más simulacros." << endl;
+    }
+}
+
+void mostrarSimulacros(Simulacro lista[], int cantidad) {
+    if(cantidad == 0) {
+        cout << "No hay simulacros registrados." << endl;
+    } else {
+        cout << "\n ********** Lista de Simulacros Registrados **********\n";
+        for(int i = 0; i < cantidad; i++) {
+            cout << "DNI del Simulacro: " << lista[i].DNI << endl;
+            cout << "Fecha: " << lista[i].fecha << endl;
+            cout << "----------------------------------------" << endl;
+        }
     }
 }
