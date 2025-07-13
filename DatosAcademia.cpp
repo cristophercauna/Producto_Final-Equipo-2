@@ -14,6 +14,12 @@ struct Simulacro {
     string fecha;
 };
 
+struct Examen {
+    int DNI;
+    int id_simulacro;
+    float nota; // El puntaje sera de 0 a 600 y el -1 indica que no se tiene nota
+}; 
+
 void agregarPostulante(Postulante[], int&, Postulante);
 void mostrarPostulante(Postulante[], int);
 void agregarSimulacro(Simulacro[], int&, Simulacro);
