@@ -44,8 +44,9 @@ int main() {
         cout << "3. Registrar Simulacro\n";
         cout << "4. Mostrar Simulacros\n";
         cout << "5. Registrar nota\n";
+        cout << "7. Modificar Ciclo y Canal\n";
         cout << "0. Salir\n";
-        cout << "Ingrese el operador: ";
+        cout << "Ingrese la opcion: ";
         cin >> op;
         cin.ignore();
 
@@ -122,6 +123,38 @@ int main() {
                 }
                 system("pause");
                 break;
+            }
+            case 7:{
+                system("cls");
+                int dniBuscar,i;
+                cout<<"\n ************* CAMBIO DE CICLO Y CANAL *************"<<endl;
+                cout<<"Ingrese el DNI del postulante a cambiar: "; cin>>dniBuscar;
+                for(i=0 ; i<numPostulantes ; i++){
+                    if(postulantes[i].DNI == dniBuscar){
+                        cout<<"\n -----Los Datos actuales del postulante son: -----\n ";
+                        cout<<"Nombre | "<<postulantes[i].nomCompletos<<endl;
+                        cout<<"Ciclo | "<<postulantes[i].ciclo<<endl;
+                        cout<<"Canal | "<<postulantes[i].canal<<endl;
+                        string confirmar;
+                            cout<<"Desea seguir con el cambio de canal y ciclo ? (S / N)"<<endl;
+                            cin>>confirmar;
+                            if(confirmar == "S" || confirmar =="s"){
+                            cin.ignore();
+                            cout<<"Ingrese el nuevo Ciclo (cepu o fase): "; getline(cin,postulantes[i].ciclo);
+                            cout<<"Ingrese el nuevo Canal (1-4): "; cin>>postulantes[i].canal;
+                            cout<<"Datos Actualizados correctamente. \n";
+                            }
+                            else{
+                            cout<<"Operacion cancelada por el usuario \n";
+                            }
+                            break;
+                         }
+                     }
+                        if(i == numPostulantes){
+                            cout<<"No se encontro ningun postulante con ese DNI \n";
+                        }
+                        system("pause");
+                        break;
             }
             case 0: {
                 cout << "Finalizando Programa" << endl;
