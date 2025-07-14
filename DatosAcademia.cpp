@@ -10,7 +10,7 @@ struct Postulante {
 };
 
 struct Simulacro {
-    int DNI;      
+    int id_simulacro;     
     string fecha;
 };
 
@@ -73,8 +73,8 @@ int main() {
                 Simulacro nuevoSim;
                 system("cls");
                 cout << "\n ********* Ingrese los datos del nuevo simulacro *********\n";
-                cout << "Ingrese el DNI del simulacro: ";
-                cin >> nuevoSim.DNI;
+                cout << "Ingrese el ID del simulacro: ";
+                cin >> nuevoSim.id_simulacro;
                 cin.ignore();
                 cout << "Ingrese la fecha del simulacro (dd/mm/aaaa): ";
                 getline(cin, nuevoSim.fecha);
@@ -157,7 +157,7 @@ void mostrarSimulacros(Simulacro lista[], int cantidad) {
     } else {
         cout << "\n ********** Lista de Simulacros Registrados **********\n";
         for(int i = 0; i < cantidad; i++) {
-            cout << "DNI del Simulacro: " << lista[i].DNI << endl;
+            cout << "ID del Simulacro: " << lista[i].id_simulacro << endl;
             cout << "Fecha: " << lista[i].fecha << endl;
             cout << "----------------------------------------" << endl;
         }
