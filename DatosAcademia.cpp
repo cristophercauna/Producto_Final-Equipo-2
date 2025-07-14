@@ -24,6 +24,7 @@ void agregarPostulante(Postulante[], int&, Postulante);
 void mostrarPostulante(Postulante[], int);
 void agregarSimulacro(Simulacro[], int&, Simulacro);
 void mostrarSimulacros(Simulacro[], int);
+void leerExamen(Examen &, int, int, float);
 
 int main() {
     Postulante postulantes[100];
@@ -31,6 +32,8 @@ int main() {
 
     int numPostulantes = 0;
     int numSimulacros = 0;
+    Examen examenes[100];
+    int numExamenes = 0;
 
     int op;
     do {
@@ -162,4 +165,10 @@ void mostrarSimulacros(Simulacro lista[], int cantidad) {
             cout << "----------------------------------------" << endl;
         }
     }
+}
+
+void leerExamen(Examen &e, int dni, int idSimulacro, float nota) {
+    e.DNI = dni;
+    e.id_simulacro = idSimulacro;
+    e.nota = nota;
 }
