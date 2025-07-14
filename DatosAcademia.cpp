@@ -43,6 +43,7 @@ int main() {
         cout << "2. Mostrar Postulantes\n";
         cout << "3. Registrar Simulacro\n";
         cout << "4. Mostrar Simulacros\n";
+        cout << "5. Registrar nota\n";
         cout << "0. Salir\n";
         cout << "Ingrese el operador: ";
         cin >> op;
@@ -88,6 +89,37 @@ int main() {
             case 4: {
                 system("cls");
                 mostrarSimulacros(simulacros, numSimulacros);
+                system("pause");
+                break;
+            }
+            case 5: {
+                system("cls");
+                cout << "\n ********** Registro de notas del examen simulacro *************\n";
+                int dniBuscar;
+                float notaNueva;
+                int idSimulacro;
+                cout << "Ingrese el DNI del postulante: ";
+                cin >> dniBuscar;
+                int i;
+                for (i = 0; i < numPostulantes; i++) {
+                    if (postulantes[i].DNI == dniBuscar) {
+                        cout<< "Ingrese el ID del simulacro: ";
+                        cin>> idSimulacro;
+                        cout<< "Ingrese la nota obtenida (0 a 600): ";
+                        cin>> notaNueva;
+                        if (notaNueva >= 0 && notaNueva <= 600) {
+                            leerExamen(examenes[numExamenes], dniBuscar, idSimulacro, notaNueva);
+                            numExamenes=numExamenes+1;
+                            cout<<"Nota registrada correctamente.\n";
+                        } else {
+                            cout<<"Nota invalida. Debe estar entre 0 y 600 puntos.\n";
+                        }
+                        break;
+                    }
+                }
+                if (i==numPostulantes) {
+                    cout <<"DNI no encontrado entre los postulantes.\n";
+                }
                 system("pause");
                 break;
             }
