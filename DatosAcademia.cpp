@@ -6,7 +6,7 @@ struct Postulante {
     int DNI;
     string nomCompletos;
     string ciclo;
-    string canal;
+    int canal; //cambio de tipo de variable
 };
 
 struct Simulacro {
@@ -17,7 +17,7 @@ struct Simulacro {
 struct Examen {
     int DNI;
     int id_simulacro;
-    float nota; // El puntaje sera de 0 a 600 y el -1 indica que no se tiene nota
+    float nota; // El puntaje sera de 0 a 600 
 }; 
 
 void agregarPostulante(Postulante[], int&, Postulante);
@@ -62,7 +62,7 @@ int main() {
                 cout << "Ingrese el ciclo que ira el Postulante (cepu o fase): ";
                 getline(cin, nuevo.ciclo);
                 cout << "Ingrese el canal que el postulante seguira (1-4): ";
-                getline(cin, nuevo.canal);
+                cin >> nuevo.canal;   //cambiamos la entrada
                 agregarPostulante(postulantes, numPostulantes, nuevo);
                 system("pause");
                 break;
@@ -150,7 +150,7 @@ void agregarPostulante(Postulante lista[], int& cantidad, Postulante nuevo) {
 
 void mostrarPostulante(Postulante lista[], int cantidad) {
     string ciclo[] = {"cepu", "fase"};
-    string canales[] = {"1", "2", "3", "4"};
+    int canales[] = {1, 2, 3, 4}; // aqui tmb se cambia el tipo de variable
 
     for(int i = 0; i < 2; i++) { 
         for(int j = 0; j < 4; j++) { 
