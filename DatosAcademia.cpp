@@ -45,6 +45,7 @@ int main() {
         cout << "3. Registrar Simulacro\n";
         cout << "4. Mostrar Simulacros\n";
         cout << "5. Registrar nota\n";
+        cout << "6. Mostrar notas\n";
         cout << "0. Salir\n";
         cout << "Ingrese el operador: ";
         cin >> op;
@@ -222,6 +223,12 @@ void mostrarNotasPorSimulacro(Postulante postulantes[], int numPostulantes, Exam
     cout << "\nIngrese el ciclo (cepu o fase): ";
     cin >> cicloEsco;
 
+    cout << "\nSeleccione el canal que desea visualizar:\n";
+    cout << "1. canal 1: CIENCIAS DE LA SALUD Y BIOMEDICAS\n";
+    cout << "2. canal 2: CIENCIAS EXACTAS E INGENIERIA\n";
+    cout << "3. canal 3: ARQUITECTURA, CIENCIAS SOCIALES Y HUMANIDADES\n";
+    cout << "4. canal 4: CIENCIAS ACTUALES Y EMPRESARIALES\n";
+
     int canal;
     cout << "\nIngrese el número de canal (1 al 4): ";
     cin >> canal;
@@ -245,6 +252,6 @@ void mostrarNotasPorSimulacro(Postulante postulantes[], int numPostulantes, Exam
     }
 
     if (contador == 1) {
-        cout << "\n       No se encontraron notas registradas.\n";
+        cout<<"\n    No se encontraron notas registradas para ese filtro.\n";
     }
 }
