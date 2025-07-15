@@ -126,6 +126,12 @@ int main() {
                 system("pause");
                 break;
             }
+            case 6: { // se agrega el nuevo case 6 MOSTRAR
+                system("cls");
+                mostrarNotasPorSimulacro(postulantes, numPostulantes, examenes, numExamenes);
+                system("pause");
+                break;
+            }    
             case 7:{
                 system("cls");
                 int dniBuscar,i;
@@ -150,17 +156,11 @@ int main() {
                             cout<<"Operacion cancelada por el usuario \n";
                             }
                             break;
-                         }
-                     }
-                        if(i == numPostulantes){
-                            cout<<"No se encontro ningun postulante con ese DNI \n";
-                        }
-                        system("pause");
-                        break;
-            }
-            case 6: { // se agrega el nuevo case 6 MOSTRAR
-                system("cls");
-                mostrarNotasPorSimulacro(postulantes, numPostulantes, examenes, numExamenes);
+                    }
+                }
+                if(i == numPostulantes){
+                    cout<<"No se encontro ningun postulante con ese DNI \n";
+                }
                 system("pause");
                 break;
             }
@@ -256,14 +256,14 @@ void mostrarNotasPorSimulacro(Postulante postulantes[], int numPostulantes, Exam
     cout << "\nIngrese el ciclo (cepu o fase): ";
     cin >> cicloEsco;
 
-    cout << "\nSeleccione el canal que desea visualizar:\n";
-    cout << "1. canal 1: CIENCIAS DE LA SALUD Y BIOMEDICAS\n";
-    cout << "2. canal 2: CIENCIAS EXACTAS E INGENIERIA\n";
-    cout << "3. canal 3: ARQUITECTURA, CIENCIAS SOCIALES Y HUMANIDADES\n";
-    cout << "4. canal 4: CIENCIAS ACTUALES Y EMPRESARIALES\n";
+    cout << "\nSeleccione el canal que desea visualizar:\n"<<endl;
+    cout << "canal 1: CIENCIAS DE LA SALUD Y BIOMEDICAS\n";
+    cout << "canal 2: CIENCIAS EXACTAS E INGENIERIA\n";
+    cout << "canal 3: ARQUITECTURA, CIENCIAS SOCIALES Y HUMANIDADES\n";
+    cout << "canal 4: CIENCIAS ACTUALES Y EMPRESARIALES\n";
 
     int canal;
-    cout << "\nIngrese el número de canal (1 al 4): ";
+    cout << "\nIngrese el numero de canal (1 al 4): ";
     cin >> canal;
 
     cout<<"\n******************** EXAMEN SIMULACRO (ID : " << idSimulacro << ") ***************************\n";
