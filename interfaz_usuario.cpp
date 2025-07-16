@@ -1,7 +1,10 @@
 #include "GestorAcademia.h"
 #include<iostream>
+<<<<<<< HEAD
 #include<iomanip>
 
+=======
+>>>>>>> 461fb26 (Se añade using namespace std;)
 using namespace std;
 
 void mostrarPostulante(Postulante lista[], int cantidad) {
