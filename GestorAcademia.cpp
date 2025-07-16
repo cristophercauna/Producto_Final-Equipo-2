@@ -1,6 +1,8 @@
 #include "GestorAcademia.h"
 #include<iostream>
 
+using namespace std;
+
 void agregarPostulante(Postulante lista[], int& cantidad, Postulante nuevo) {
     if(cantidad < 100) {
         lista[cantidad] = nuevo;

@@ -42,7 +42,7 @@ int main() {
                 cout << "Ingrese el ciclo que ira el Postulante (cepu o fase): ";
                 getline(cin, nuevo.ciclo);
                 cout << "Ingrese el canal que el postulante seguira (1-4): ";
-                cin >> nuevo.canal;   //cambiamos la entrada
+                cin >> nuevo.canal; 
                 agregarPostulante(postulantes, numPostulantes, nuevo);
                 system("pause");
                 break;
@@ -114,7 +114,7 @@ int main() {
                 system("pause");
                 break;
             }
-            case 6: { // se agrega el nuevo case 6 MOSTRAR
+            case 6: { 
                 system("cls");
                 mostrarNotasPorSimulacro(postulantes, numPostulantes, examenes, numExamenes);
                 system("pause");

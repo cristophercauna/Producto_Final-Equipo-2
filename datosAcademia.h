@@ -7,7 +7,7 @@ struct Postulante {
     int DNI;
     string nomCompletos;
     string ciclo;
-    int canal; //cambio de tipo de variable
+    int canal; 
 };
 
 struct Simulacro {
@@ -18,7 +18,7 @@ struct Simulacro {
 struct Examen {
     int DNI;
     int id_simulacro;
-    float nota; // El puntaje sera de 0 a 600 
+    float nota; 
 }; 
 
 #endif
