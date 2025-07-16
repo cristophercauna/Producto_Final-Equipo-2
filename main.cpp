@@ -12,7 +12,6 @@ int main() {
     int numSimulacros = 0;
     Examen examenes[100];
     int numExamenes = 0;
-
     int op;
     do {
         system("cls");
@@ -42,7 +41,7 @@ int main() {
                 cout << "Ingrese el ciclo que ira el Postulante (cepu o fase): ";
                 getline(cin, nuevo.ciclo);
                 cout << "Ingrese el canal que el postulante seguira (1-4): ";
-                cin >> nuevo.canal; 
+                cin >> nuevo.canal;
                 agregarPostulante(postulantes, numPostulantes, nuevo);
                 system("pause");
                 break;
