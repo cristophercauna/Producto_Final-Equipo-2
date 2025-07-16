@@ -85,6 +85,17 @@ int main() {
                     if (postulantes[i].DNI == dniBuscar) {
                         cout<< "Ingrese el ID del simulacro: ";
                         cin>> idSimulacro;
+                        int s;
+                        for ( s = 0; s < numSimulacros; s++) { 
+                            if (simulacros[s].id_simulacro == idSimulacro) {
+                                break; 
+                            }
+                        }
+                        if (s == numSimulacros) {
+                            cout << "ID de simulacro no encontrado. Registrelo primero en la opcion 3.\n";
+                            system("pause");
+                            break; 
+                        }
                         cout<< "Ingrese la nota obtenida (0 a 600): ";
                         cin>> notaNueva;
                         if (notaNueva >= 0 && notaNueva <= 600) {
