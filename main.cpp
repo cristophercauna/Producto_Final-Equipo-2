@@ -38,8 +38,12 @@ int main() {
                 cin.ignore();
                 cout << "Ingrese el nombre del Postulante: ";
                 getline(cin, nuevo.nomCompletos);
-                cout << "Ingrese el ciclo que ira el Postulante (cepu o fase): ";
-                getline(cin, nuevo.ciclo);
+                do{
+                    cout<<"Ingrese el ciclo que ira el postulante (cepu o fase): "; getline(cin, nuevo.ciclo);
+                    if(nuevo.ciclo != "cepu" && nuevo.ciclo != "fase"){
+                        cout<<"Ciclo Invalido. Debe ser 'cepu' o 'fase'.";
+                    }
+                }while(nuevo.ciclo != "cepu" && nuevo.ciclo != "fase");
                 cout << "Ingrese el canal que el postulante seguira (1-4): ";
                 cin >> nuevo.canal;
                 agregarPostulante(postulantes, numPostulantes, nuevo);
