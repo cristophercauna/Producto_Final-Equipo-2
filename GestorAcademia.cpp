@@ -14,7 +14,7 @@ void agregarPostulante(Postulante lista[], int& cantidad, Postulante nuevo) {
 void agregarSimulacro(Simulacro lista[], int& cantidad, Simulacro nuevo) {
     for (int i = 0; i < cantidad; i++) {  
         if (lista[i].id_simulacro == nuevo.id_simulacro) {
-            cout << "Error: El ID de simulacro " << nuevo.id_simulacro << " ya existe y no se puede duplicar.\n";
+            cout<< "Error: El ID de simulacro " << nuevo.id_simulacro << " ya existe y no se puede duplicar.\n";
             return; 
         }
     }
